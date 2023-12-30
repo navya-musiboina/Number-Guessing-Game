@@ -1,0 +1,25 @@
+//Number Guessing Game
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+int main()
+{
+    int random;
+    random=1+(rand()%50);//generating random numbers from 1 to 50
+    int guess;
+    cout<<"Enter your guess for the random number between 1 to 50:";
+    cin>>guess;
+    while(1)
+    {
+        if(guess>random)
+        cout<<"Your guess is too high! Try a lower number"<<endl;
+        else if(guess<random)
+        cout<<"Your guess is too low! Try a higher number"<<endl;
+        else{
+    cout<<"Congratulations! You guessed the correct number"<<endl;
+    break;
+        }
+        cout<<"Enter your guess:";
+        cin>>guess;
+    }
+}
